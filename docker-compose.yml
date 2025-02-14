@@ -30,7 +30,7 @@ services:
       # Dockerfile 경로
       context: ./api
       dockerfile: Dockerfile
-    image: sangho0312/api-image:latest
+    image: ${DOCKER_USERNAME}/api-image:latest
     ports:
       - "8080:8080"
     networks:
@@ -49,7 +49,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: sangho0312/client-image:latest
+    image: ${DOCKER_USERNAME}/client-image:latest
     ports:
       - "80:80"
       - "443:443"
